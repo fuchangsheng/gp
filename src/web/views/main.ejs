@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>微博后台事件处理系统</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css"/>
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <style type="text/css">
+      .toper{
+        background: #111111;
+        color: white;
+        font-size: 24px;
+        height: 60px;
+        line-height: 60px;
+        padding-left: 30px;
+        padding-right: 50px;
+      }
+      .rter{
+        font-size: 20px;
+      }
+      #ifs_content{
+        margin-left: 250px;
+        margin-top: 0px;
+        height: 100%;
+      }
+      html,body{
+        height: 100%;
+      }
+      body {  
+       overflow:scroll;  
+       overflow-y:hidden;
+       overflow-x: hidden; 
+      }
+    </style>
+</head>
+<body>
+    <div class="toper">
+        <span class="pull-left">
+          <span>微博事件发掘后台管理系统</span>
+        </span>
+        <span class="pull-right rter">
+          <span>欢迎您,<%=user.name%>&nbsp;&nbsp;</span>
+          <span class="glyphicon glyphicon-user"></span>
+        </span>
+    </div>
+      <div class="sidebar">
+        <h1><i class="fa fa-bars push"></i>操作 <span class="color">Options</span></h1>
+        <ul>
+            <li class="selected sli" data-id="/admin/host">
+              <a href="#">
+                <i class="fa fa-dashboard push"></i>首页<i class="fa fa-angle-right"></i>
+              </a>
+              <span class="hover"></span>
+            </li>
+            <li class="sli" data-id="/admin/events">
+              <a href="#">
+                <i class="fa fa-user push"></i>事件查看<i class="fa fa-angle-right"></i>
+              </a>
+              <span class="hover"></span>
+            </li>
+            <li class="sli" data-id="/admin/mark">
+              <a href="#">
+                <i class="fa fa-cog push"></i>人工标注<i class="fa fa-angle-right"></i>
+              </a>
+              <span class="hover"></span>
+            </li>
+            <li class="sli" data-id="/admin/crf">
+              <a href="#">
+                <i class="fa fa-picture-o push"></i>机器标注<i class="fa fa-angle-right"></i>
+              </a>
+              <span class="hover"></span>
+            </li>
+        </ul>
+      </div>
+      <div id="ifs_content">
+        <iframe width=100% height=100% frameborder=0 src="/admin/host"></iframe>
+      </div>
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script src="/js/sidebar.js"></script>
+
+</body>
+</html>
