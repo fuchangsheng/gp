@@ -7,13 +7,13 @@ def ws(text):
         'api_key': config.api_key,
         'text': text,
         'pattern': 'pos',
-        'format': 'plain'
+        'format': 'conll'
     }
 
     r = requests.post(config.url, param)
     r.encoding = 'utf-8'
     return r.text
 
-s = '我爱学习，学习使我快乐'
+s = '我是一个学通信的学生'
 print(ws(s))
 

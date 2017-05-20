@@ -4,9 +4,10 @@ process:
 	python goeventsToSentence.py
 	python combine.py
 
+count=1
 # train
 crf_train:
-	.\CRF++-0.58\crf_learn -c 10.0 .\templatechunk .\combine_train.txt .\output\model
+	.\CRF++-0.58\crf_learn -c 600.1 .\templatechunk .\combine_train.txt .\output\model
 
 # test
 crf_test:
